@@ -1,4 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
+    let preloadEl = document.querySelector('.preload');
+    setTimeout(() => preloadEl.classList.add('hidden'), 300);
+
+    preloadEl.addEventListener('transitionend', () => {
+        preloadEl.style.display = 'none';
+    });
+
     // At this part we are loading languages list (it will updating periodically)
     ////////////////////////////////////////////////
     let languages = [ // Language / ico
