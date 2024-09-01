@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     // At this part we are loading languages list (it will updating periodically)
     ////////////////////////////////////////////////
     let languages = [ // Language / ico
