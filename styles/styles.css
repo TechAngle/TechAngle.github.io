@@ -71,6 +71,33 @@ body {
     font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+    .about {
+        margin: 0px 20px 0px 20px;
+        padding-left: 20px;
+        text-wrap: stable;
+    }
+
+    /* Используйте max-width в зависимости от вашей целевой ширины экрана */
+    .file-list {
+        display: block;
+        margin-top: -5px;
+        margin-left: 20px;
+        /* Уменьшите отступы */
+        font-size: 1rem;
+        /* Уменьшите размер шрифта */
+    }
+
+    .file {
+        display: block;
+        /* Убедитесь, что элементы отображаются в блоке */
+        margin-top: -5px;
+        margin-bottom: 10px;
+        margin-left: 2rem;
+        /* Добавьте отступ между элементами */
+    }
+}
+
 .creator-name {
     margin-top: 3.5vh;
     text-shadow: 4px 2px 2px #A1A1A1;
