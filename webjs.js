@@ -47,13 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     ////////////////////////////////////////////////
 
-    let selected_file = null;
-    let filename = document.querySelector('.file-name');
-
-    function change_filename(_filename) {
-        if (filename) filename.textContent = _filename;
-    }
-
     let command = document.querySelector('.command-info');
 
     function change_command(_command, _filename) {
@@ -71,34 +64,37 @@ window.addEventListener('DOMContentLoaded', () => {
     let features = document.querySelector('.features');
     let futureGoals = document.querySelector('.future-goals-main');
 
-    function clear_command() {
-        change_command('', '');
-        myself.style.display = 'none';
-        features.style.display = 'none';
-        futureGoals.style.display = 'none';
+    function show_blocks(a, b, c) {
+        if (!([a, b, c].every(val => typeof val === 'boolean')))
+            throw new Error("Invalid type");
+
+        const toShow = (value) => value ? 'block' : 'none';
+
+        myself.style.display = toShow(a);
+        features.style.display = toShow(b);
+        futureGoals.style.display = toShow(c);
     }
 
-    if (myself
-        && features
-        && futureGoals
-    ) {
+    function clear_command() {
+        change_command('', '');
+        show_blocks(false, false, false);
+    }
+
+    const TIMEOUT = 300, // in milliseconds
+        COMMAND = 'cat';
+
+    if (myself && features && futureGoals) {
         aboutMeEl.addEventListener('click', () => {
-            change_command('cat', aboutMeEl.textContent);
-            myself.style.display = 'block';
-            features.style.display = 'none';
-            futureGoals.style.display = 'none';
+            change_command(COMMAND, aboutMeEl.textContent);
+            setTimeout(() => show_blocks(true, false, false), TIMEOUT);
         })
         featuresEl.addEventListener('click', () => {
-            change_command('cat', featuresEl.textContent);
-            myself.style.display = 'none';
-            features.style.display = 'block';
-            futureGoals.style.display = 'none';
+            change_command(COMMAND, featuresEl.textContent);
+            setTimeout(() => show_blocks(false, true, false), TIMEOUT);
         })
         futureGoalsEl.addEventListener('click', () => {
-            change_command('cat', futureGoalsEl.textContent);
-            myself.style.display = 'none';
-            features.style.display = 'none';
-            futureGoals.style.display = 'block';
+            change_command(COMMAND, futureGoalsEl.textContent);
+            setTimeout(() => show_blocks(false, false, true), TIMEOUT);
         })
 
         clear_command();
@@ -106,9 +102,8 @@ window.addEventListener('DOMContentLoaded', () => {
         // Clear command on pressing escape
         document.onkeydown = (e) => {
             e.preventDefault();
-            if (e.key.toLowerCase() === 'escape' || e.key.toLowerCase() === 'esc') {
+            if (e.key.toLowerCase() === 'escape' || e.key.toLowerCase() === 'esc')
                 clear_command();
-            }
         }
     }
 });
