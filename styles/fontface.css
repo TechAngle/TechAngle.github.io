@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "SF Pixelate";
+    src: url("../src/sf-pixelate/SFPixelate-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Manaspace";
+    src: url("../src/manaspace/manaspc.ttf") format("truetype");
+}

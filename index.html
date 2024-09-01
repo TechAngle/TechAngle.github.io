@@ -1,49 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="TechAngle Website">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/textstyles.css">
+    <link rel="stylesheet" href="styles/fontface.css">
+    <link rel="icon" href="me.png">
+    <title>TechAngle Github</title>
 </head>
 
 <body>
-    <header class="landing">
-        <h1>Welcome to My World</h1>
-        <p>A programmer and artist, balancing code and creativity.</p>
-        <a href="#about" class="scroll-btn">Learn More</a>
+    <header class="header">
+        <div class="avatar">
+            <img src="me.png" alt="Me" width="64" height="64">
+        </div>
+        <div>
+            <h1 class="creator-name hover-underline-animation">TechAngle</h1>
+        </div>
+        <div id="socials">
+            <!-- Github -->
+            <div class="github-ico">
+                <a href="https://github.com/TechAngle">
+                    <img src="./src/github.png" width="48" height="48" title="My Github">
+                </a>
+            </div>
+        </div>
     </header>
 
-    <section id="about" class="about-me">
-        <h2>About Me</h2>
-        <p>I am a self-taught programmer specializing in Python. My programming interest is balanced by my artistic
-            side, which I explore through art and EDM music.</p>
-        <p>I spend most of my free time enhancing my skills in coding, staying current with industry trends, and
-            exploring new technologies. I thrive on difficult projects and am dedicated to producing high-quality
-            results.</p>
-    </section>
+    <div class="container">
+        <!-- Greeting of user -->
+        <div>
+            <p style="margin-left: 15px;">-------------------------------------------------------</p>
+            <p style="font-family: 'SF Pixelate'; margin-left: 1.2rem; font-size: 15px; font-weight: 600;">
+                <span class="green">[OK]</span> Starting TechOS&#46;&#46;&#46; <br />
+                <span class="green">[OK]</span> Mounting life's info into code&#46;&#46;&#46; <br />
+                <span class="green">[OK]</span> Loading electricity&#46;&#46;&#46; <br />
+                <span class="green">[OK]</span> Loading programming languages&#46;&#46;&#46; <br /><br />
 
-    <section id="goals" class="goals">
-        <h2>Goals for the Future</h2>
-        <div class="goal-card">
-            <h3>Advancing Technology</h3>
-            <p>I aim to push the boundaries of what technology can achieve. My goal is to work on projects that solve
-                complex problems and shape the future of digital technologies.</p>
+                <span class="yellow">Enter login:</span> visitor<br />
+                <span class="yellow">Enter password:</span> ****** <br />
+                <span class="green">[OK]</span> Log in successfully! <br />
+            </p>
+            <p style="margin-left: 15px;">-------------------------------------------------------</p>
+            <h2 class="greeting">
+                Welcome to <strong>TechOS</strong>!
+            </h2>
         </div>
-        <div class="goal-card">
-            <h3>Inspiring Others</h3>
-            <p>Inspiring and motivating others is equally important to me. Through mentoring, sharing knowledge, and
-                participating in tech communities, I want to create a supportive environment where learning and growth
-                are celebrated.</p>
-        </div>
-    </section>
+        <!-- END -->
 
-    <footer>
-        <p>Connect with me on <a href="https://github.com/TechAngle">GitHub</a></p>
+        <!-- ls command -->
+        <div>
+            <p>
+                <span class="console-like">
+                    <strong>
+                        <span class="red">root</span><span class="green">@</span>visitor /home&gt;
+                    </strong>
+                </span>
+                <span class="command">
+                    <span style="color: #ddd">ls</span>
+                </span>
+            </p>
+            <!-- output -->
+            <p>
+                <span class="file-list">
+                    <span class="about_me_py pointer file" title="Click for read file">about_me.txt</span>
+                    <span class="features_py pointer file" title="Click for read file">languages_and_programs.txt</span>
+                    <span class="future_goals_py pointer file" title="Click for read file">future_goals.txt</span>
+                </span>
+            </p>
+        </div>
+
+        <!-- Command for about -->
+        <div>
+            <p>
+                <span class="console-like">
+                    <strong>
+                        <span class="red">root</span><span class="green">@</span>visitor /home&gt;
+                    </strong>
+                </span>
+                <span class="command-info">
+                    <span style="color: #ddd">python</span> <span class='file-name'>about.py</span>
+                </span>
+            </p>
+        </div>
+        <!-- END -->
+
+        <!-- About -->
+        <div class="about">
+            <!-- About myself, who I am -->
+            <p class="myself">
+                &nbsp;&nbsp;&nbsp;&nbsp;I'm a programmer from
+                <!-- Ukraine flag -->
+                <img src="src/ukraine.png" width="25"> Ukraine,
+                who has taken a large interest
+                in programming and improving my skills in <strong>everything that interests me</strong> (such as
+                programming, data analysis, math, etc.).
+            </p>
+            <div class="features">
+                <!-- Programming languages -->
+                <h3>At this time, I'm learning the following programming languages:</h3>
+                <div class="preferred-languages">
+                    <!-- Languages must be added with JS -->
+                </div>
+
+                <!-- Coding programs -->
+                <h3> For coding, I usually use: </h3>
+                <div class="programs">
+                    <ul>
+                        <li class="list-element">
+                            <!-- Visual Studio Code-->
+                            <img class="program-icon" src="src/programs/vscode.png">
+                            <span class="app-name">
+                                Visual Studio Code
+                            </span>
+                            <span class="gray">
+                                <i>(90% of projects)</i>
+                            </span>
+                            &nbsp;
+                            <span class="green">
+                                <i>OR</i> &nbsp;
+                            </span>
+                            &nbsp;
+                            <!-- Visual Studio Community -->
+                            <img class="program-icon" src="src/programs/vscommunity.png">
+                            <span class="app-name">
+                                Visual Studio Community
+                            </span>
+                        </li>
+                        <!-- PyCharm -->
+                        <li class="list-element">
+                            <img class="program-icon" src="src/programs/pycharm.png">
+                            <span class="app-name">
+                                PyCharm Community Edition
+                            </span>
+                        </li>
+                        <!-- IntelliJ IDEA -->
+                        <li class="list-element">
+                            <img class="program-icon" src="src/programs/intellij.png">
+                            <span class="app-name">
+                                IntelliJ IDEA Community Edition
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Additional programs -->
+                <h3>For design:</h3>
+                <div class="additional-programs">
+                    <ul>
+                        <!-- Photoshop -->
+                        <li class="list-element">
+                            <img class="program-icon" src="src/programs/photoshop.png" alt="Photoshop">
+                            <span class="app-name">
+                                Adobe Photoshop
+                            </span>
+                        </li>
+                        <!-- Illustrator -->
+                        <li class="list-element">
+                            <img class="program-icon" src="src/programs/illustrator.png" alt="Illustrator">
+                            <span class="app-name">
+                                Adobe Illustrator
+                            </span>
+                        </li>
+                        <!-- Aseprite -->
+                        <li class="list-element">
+                            <img class="program-icon" src="src/programs/aseprite.png" alt="Aseprite">
+                            <span class="app-name">
+                                Aseprite
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Future goals -->
+            <main class="future-goals-main">
+                <h2 style="margin-bottom: -1vh;"><u>My vision for the future is twofold</u>:</h2> <br />
+                <div class="future-goals">
+                    <p></p>
+                    <div class="column">
+                        <p>
+                            <span class="yellow"><strong><u>Advancing Technology</u></strong></span>: I am committed to
+                            pushing the boundaries of what technology can achieve. I want to work on cutting-edge
+                            projects
+                            that not only solve complex problems but also shape the way we live and work in a world of
+                            digital technologies. My goal is to contribute to the development of innovative
+                            solutions that have a meaningful impact on society.
+                        </p> <br />
+                    </div>
+                    <div class="column">
+                        <p>
+                            <span class="yellow" style="cursor: var(--pointer);">
+                                <strong><u><a
+                                            href="https://www.linkedin.com/pulse/inspiring-others-one-most-powerful-things-we-can-do-sherwood/"
+                                            class="yellow" style="cursor: var(--pointer);">
+                                            Inspiring
+                                            others</a></u></strong></span>: Equally important to me is
+                            inspiring and motivating others. I want to be a source of motivation for individuals on
+                            their own journeys of improvement. Whether through mentoring, sharing knowledge, or
+                            participating in tech communities, I aim to foster an environment where learning
+                            and growth are celebrated. I believe that by lifting each other up, we can collectively
+                            reach greater heights in the technology industry.
+                        </p> <br />
+                    </div>
+                </div>
+                <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<u style="font-size: 19px;">Essentially</u>, my future goals revolve around
+                    being at the forefront of
+                    technological
+                    advancement and
+                    creating a positive ripple effect in the tech community.
+                </span>
+            </main>
+        </div>
+    </div>
+
+    <!-- Info about author -->
+    <footer class="footer">
+        <span>
+            <span style="font-size: 15px;">&copy;</span> TechAngle 2024-2025 &nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/TechAngle/techangle.github.io/LICENSE" style="font-size: 13px;">
+                AGPL v2.0 License
+            </a>
+        </span>
+        <span class="site-project">
+            This website project available on
+            <a href="https://github.com/TechAngle/techangle.github.io">
+                <u>
+                    Github
+                </u>
+            </a>
+        </span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>

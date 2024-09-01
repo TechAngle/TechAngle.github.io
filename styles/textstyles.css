@@ -1,0 +1,23 @@
+.red {
+    color: #dd0000 !important;
+}
+
+.yellow {
+    color: #dd0 !important;
+}
+
+.green {
+    color: #0d0 !important;
+}
+
+.blue {
+    color: #00d !important;
+}
+
+.light-blue {
+    color: rgb(33, 218, 255) !important;
+}
+
+.gray {
+    color: #595959;
+}

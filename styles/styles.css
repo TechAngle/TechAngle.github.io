@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+:root {
+    --default-font: "Manaspace", sans-serif;
+    --default-font-size: 11px;
+    --linear-gradient: linear-gradient(to right, #101010, #222 75%);
+    --filename-color: rgb(8, 102, 218);
+    --filename-color-hover: rgb(46, 136, 247);
+
+    /* Cursors */
+    --still-cursor: url("../src/cursor/sitecursor.png"), default !important;
+    --pointer: url("../src/cursor/pointer.png"), default !important;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    /* Allows scrolling */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: var(--linear-gradient);
+    font-family: var(--default-font);
+    color: #dddddd;
+    font-size: var(--default-font-size);
+    font-weight: 200;
+    margin: 0;
+}
+
+
+.header {
+    display: flex;
+    height: 110px !important;
+    /* margin: -2vh 0vh 2vh; */
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-image: var(--linear-gradient);
+    box-shadow: 0px 11px 3px -3px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+.pointer {
+    cursor: var(--pointer);
+}
+
+.container {
+    flex: 1;
+    /* Takes up available space */
+    display: flex;
+    flex-direction: column;
+    padding: inherit;
+    background-color: #101010;
+    width: 100%;
+    user-select: none;
+}
+
+.file-list {
+    margin-left: 50px;
+    color: var(--filename-color);
+    font-size: 1.2rem;
+}
+
+.creator-name {
+    margin-top: 3.5vh;
+    text-shadow: 4px 2px 2px #A1A1A1;
+    color: #fff;
+}
+
+.about {
+    font-size: 17px;
+    font-weight: 200;
+    margin-left: 1.4rem;
+    padding-right: 5px;
+    margin-top: -1.5rem;
+}
+
+.github-ico {
+    display: flex;
+    margin: 1vh 0 0 3vh;
+    justify-self: center;
+    transform: scale(1.0);
+    cursor: var(--pointer);
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.github-ico:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: monospace;
+    width: 100%;
+    padding: 5px;
+    color: white;
+    margin-bottom: 0;
+    flex-direction: column;
+}
+
+.site-project {
+    font-size: 14px;
+    margin-top: 10px;
+    color: rgb(158, 158, 158)
+}
+
+a {
+    text-decoration: none;
+    color: rgb(158, 158, 158);
+}
+
+.language-icon,
+.program-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-left: -20px;
+    transform: scale(1.0);
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.program-icon:hover,
+.language-icon:hover {
+    transform: scale(1.3);
+}
+
+.app-name {
+    font-size: 18px;
+    margin-left: 10px;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.language-name {
+    margin-left: 10px;
+    font-size: 20px;
+    font-size: 18px;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.language-name:hover,
+.app-name:hover {
+    font-size: 20px;
+}
+
+.features {
+    padding-left: 1.3rem;
+    -webkit-box-shadow: -5px 0px 0px 0px #FFFFFF;
+    box-shadow: -5px 0px 0px 0px #FFFFFF;
+}
+
+.future-goals {
+    display: flex;
+    border: #18a106 solid 3px;
+    padding: 0px 10px 0px 10px;
+    margin: 1.3rem;
+    box-shadow: inset 1px 0px 15px 0px rgb(11, 152, 1);
+    position: relative;
+}
+
+.future-goals::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 4px solid #179e06;
+    z-index: 0;
+}
+
+.column {
+    display: flex;
+    padding: 0px 15px 0px 5px;
+}
+
+.console-like {
+    margin-left: 30px;
+    font-family: "DotGothic16";
+    font-family: 100;
+    font-size: 18px;
+}
+
+.command,
+.command-info {
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #dd0;
+    animation: typing 0.3s steps(40, end);
+}
+
+.avatar {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.file:hover {
+    color: var(--filename-color-hover);
+}
+
+.greeting {
+    margin: 0px 30px;
+}
+
+/* Custom cursor */
+body {
+    cursor: var(--still-cursor);
+}
+
+.caret {
+    animation: blink 1.5s step-start infinite;
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default list bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-left: 30px;
+}
+
+.list-element {
+    display: flex;
+    /* Flexbox for aligning icon and text */
+    align-items: center;
+    padding-left: 10px;
+    /* margin-bottom: 10px; */
+    /* Space between list items */
+    border-radius: 5px;
+    /* Optional: Rounded corners for list items */
+}
+
+.column {
+    font-size: 14px;
+    overflow-wrap: break-word;
+    /* Manages text wrapping */
+    transform: scale(1.0);
+    /* Correct usage of scale */
+    padding: 0px 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.column:hover {
+    transform: scale(1.05);
+    /* Apply scaling on hover */
+    color: #fff;
+    padding: 0px 15px;
+    /* Adds padding to the left and right */
+}
+
+h3 {
+    margin-bottom: 2px;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    /* Changed from 'inline' to 'inline-block' */
+    position: relative;
+    text-decoration: none;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleY(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-underline-animation:hover::after {
+    height: 3px;
+    transform: scaleY(1);
+}
